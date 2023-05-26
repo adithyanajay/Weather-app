@@ -1,0 +1,18 @@
+@import './typography.scss';
+
+:root {
+    font-size: 16px;
+}
+
+
+.App {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    padding: 1.5% 2%;
+    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    
+}
+

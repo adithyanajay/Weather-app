@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import "./sass/pages/App.scss"
+import Weather from './Pages/Weather';
+import Cities from './Pages/Cities';
+import Map from './Pages/Map';
+import Settings from './Pages/Settings';
+import './sass/App.scss'
+
+
 
 function App() {
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />  
+      <div className="container">
+        <Routes>
+          <Route path='/' element={<Weather className="logo"/>} />
+          <Route path='/cities' element={<Cities />} />
+          <Route path='/map' element={<Map />} />
+          <Route path='/settings' element={<Settings />} />
+        </Routes>
+      </div>
+      
     </div>
   );
 }
+
 
 export default App;
