@@ -1,0 +1,66 @@
+@use '../colors';
+
+.search-items {
+  position: absolute;
+  z-index: 10;
+  width: 96%;
+  margin: auto;
+
+  @media screen and (min-width: 850px) {
+    width: 50%;
+  }
+
+  .searchBar {
+    color: colors.$subFtClr;
+    border: none;
+    background-color: colors.$subClr;
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    min-height: 2.5rem;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+
+    @media screen and (min-width: 850px) {
+      margin: auto;
+      width: 100%;
+    }
+  }
+
+  .search-list {
+    width: 98%;
+    padding: 10px 10px;
+    margin: auto;
+
+    &.active {
+      background-color: hsla(0, 0, 0, 0.2);
+    }
+
+    .search-list-item {
+      width: 100%;
+      text-align: left;
+      background-color: colors.$subClr;
+      padding: 5px 1rem;
+      list-style: none;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      margin-bottom: 5px;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 0.9em;
+
+      &:hover {
+        background-color: colors.$subFtClr;
+      }
+    }
+
+    .not-data {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}

@@ -1,17 +1,18 @@
 @use "../colors";
 
 .nav {
-  position: fixed;
+  
   height: 93vh;
-  margin-right: 5%;
+  margin-right: 1.5rem;
   max-height: 1080px;
   background-color: colors.$subClr;
   border-radius: 10px;
   padding: 20px 10px;
   width: 5rem;
   text-align: center;
-
+  
   @media screen and (max-width: 850px) {
+    position: fixed;
     width: 95%;
     max-width: 600px;
     bottom: 15px;
